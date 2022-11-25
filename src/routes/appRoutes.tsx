@@ -16,6 +16,14 @@ import AlertPage from "../pages/component/AlertPage";
 import ButtonPage from "../pages/component/ButtonPage";
 import InstallationPage from "../pages/installation/InstallationPage";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
+import Account from "../pages/Account/Account";
+import AccountSetting from "../pages/Account/AccountSetting";
+import Invoices from "../pages/Account/Invoices";
+import Documentation from "../pages/Account/Documentation";
+import Support from "../pages/Account/Support";
+import Imprint from "../pages/Account/Imprint";
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+
 
 const appRoutes: RouteType[] = [
   {
@@ -116,7 +124,59 @@ const appRoutes: RouteType[] = [
       displayText: "Changelog",
       icon: <FormatListBulletedOutlinedIcon />
     }
-  }
+  },
+  {
+    path: "/account",
+    element: <Account />,
+    state: "account",
+    sidebarProps: {
+      displayText: "Account",
+      icon: <AccountBoxIcon/>
+    },
+    child: [
+      {
+        path: "/account/settings",
+        element: <AccountSetting />,
+        state: "account.settings",
+        sidebarProps: {
+          displayText: "Settings"
+        },
+       },
+       {
+        path: "/account/invoices",
+        element: <Invoices/>,
+        state: "account.invoices",
+        sidebarProps: {
+          displayText: "Invoices"
+        },
+      },
+        {
+          path: "/account/documentation",
+          element: <Documentation />,
+          state: "account.documentation",
+          sidebarProps: {
+            displayText: "Documentation"
+          },
+       },
+       {
+        path: "/account/support",
+        element: <Support />,
+        state: "account.support",
+        sidebarProps: {
+          displayText: "Support"
+        },
+        },
+        {
+          path: "/account/imprint",
+          element: <Imprint />,
+          state: "account.imprint",
+          sidebarProps: {
+            displayText: "Imprint"
+          },
+        }
+      ],
+  },
+  
 ];
 
 export default appRoutes;

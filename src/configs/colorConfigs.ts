@@ -9,6 +9,8 @@ const colorConfigs = {
   },
   topbar: {
     bg: "#fff",
+    textAlign: "right",
+    float: "right",
     color: "#000"
   },
   mainBg: colors.grey["100"]
