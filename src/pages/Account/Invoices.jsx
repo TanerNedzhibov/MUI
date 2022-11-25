@@ -1,10 +1,9 @@
 import React from 'react'
+import SelectBar from '../../components/SelectBar'
 
 const Invoices = () => {
   return (
-    <div>
-      Invoices
-    </div>
+    <SelectBar />
   )
 }
 
